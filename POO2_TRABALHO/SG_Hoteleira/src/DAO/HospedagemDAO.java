@@ -21,7 +21,7 @@ public class HospedagemDAO {
 
     public void insert(Hospedagem hospedagem) {
         Connection con = Conectar.getConectar();
-        String sql = "INSERT INTO hospedagem_Reserva(dataInicio,dataFim,valor_apagar,numero_quarto,bi_cliente) VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO hospedagem(dataInicio,dataFim,valor_apagar,numero_quarto,bi_cliente) VALUES(?,?,?,?,?)";
 
         try {
             PreparedStatement st = con.prepareStatement(sql);
@@ -50,7 +50,7 @@ public class HospedagemDAO {
 
     public void Update(Hospedagem hospedagem) {
         Connection con = Conectar.getConectar();
-        String sql = "UPDATE hospedagem_reserva set dataInicio=?,dataFim=?,valor_apagar=?,numero_quarto=?,bi_cliente=? where  id=?";
+        String sql = "UPDATE hospedagem set dataInicio=?,dataFim=?,valor_apagar=?,numero_quarto=?,bi_cliente=? where  id=?";
 
         try {
             PreparedStatement st = con.prepareStatement(sql);
@@ -77,7 +77,7 @@ public class HospedagemDAO {
 
     public void delete(Hospedagem hospedagem) {
         Connection conn = Conectar.getConectar();
-        String sql = "DELETE  FROM  hospedagem_reserva  WHERE id=?";
+        String sql = "DELETE  FROM  hospedagem  WHERE id=?";
 
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -97,7 +97,7 @@ public class HospedagemDAO {
     public ArrayList<Hospedagem> select() {
         ArrayList<Hospedagem> lista = new ArrayList<>();
 
-        String sql = "SELECT * FROM hospedagem_reserva ";
+        String sql = "SELECT * FROM hospedagem ";
 
         Connection con = Conectar.getConectar();
 

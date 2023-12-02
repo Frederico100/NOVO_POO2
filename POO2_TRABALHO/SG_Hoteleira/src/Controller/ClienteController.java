@@ -129,7 +129,7 @@ public class ClienteController {
              Point point = mouseEvent.getPoint();
              int row = form.tabcat.rowAtPoint(point);
               
-             int codigo = Integer.parseInt(form.tabcat.getModel().getValueAt(row, 0).toString());
+             String codigo = form.tabcat.getModel().getValueAt(row, 0).toString();
             
              cliente.setBiAtendente(codigo);
              

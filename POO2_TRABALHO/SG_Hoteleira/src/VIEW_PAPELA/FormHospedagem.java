@@ -234,7 +234,7 @@ public class FormHospedagem  {
     public int inter(String string){
         return Integer.parseInt(string);
     }
-    
+    /*
     public Hospedagem getObject(){
     
        
@@ -246,10 +246,11 @@ public class FormHospedagem  {
          
        Date dataInicio = new Date();
        Date dataFim = new Date(campo[2].getText());
-       Hospedagem hospedagem = new Hospedagem(0, valorApagar,dataInicio,dataFim,numero_quarto, bi_cliente);
+    //   Hospedagem hospedagem = new Hospedagem(0, valorApagar,dataInicio,dataFim,numero_quarto, bi_cliente);
          return hospedagem;
      }
-    
+    */
+    /*
     
     public Hospedagem getObjectWithID(){
        Hospedagem hospedagem =getObject();
@@ -257,7 +258,7 @@ public class FormHospedagem  {
          hospedagem.setId(id);
          return hospedagem;
         
-    }
+    }*/
     
     /*public void consultaCategoria(){
   

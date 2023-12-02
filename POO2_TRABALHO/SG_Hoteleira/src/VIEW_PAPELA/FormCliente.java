@@ -227,9 +227,9 @@ public class FormCliente  {
        
        int Bi_atendente = Integer.parseInt(campo[6].getText());
    
-       Cliente cliente = new Cliente(bi,nome,idade,sexo,telefone,endereco,dataRegistro,Bi_atendente);
+     //  Cliente cliente = new Cliente(bi,nome,idade,sexo,telefone,endereco,dataRegistro,Bi_atendente);
    
-       return cliente;
+       return null;
      }
     
     

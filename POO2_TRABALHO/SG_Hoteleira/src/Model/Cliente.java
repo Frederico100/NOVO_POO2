@@ -10,14 +10,14 @@ import java.util.Date;
  */
 public  class  Cliente extends Pessoa {
 
-    private int BiAtendente;
+    private String BiAtendente;
     private Date data_do_registro;
   
     public Cliente (){
         
     }
 
-    public Cliente(String bi, String nome, int idade, char sexo, String endereco, String telefone, Date data_do_registro,int BiAtendente){
+    public Cliente(String bi, String nome, int idade, char sexo, String endereco, String telefone, Date data_do_registro,String BiAtendente){
         super(bi,  nome, idade, sexo, endereco, telefone);
         this.data_do_registro = data_do_registro;
         this.BiAtendente=BiAtendente;
@@ -64,8 +64,10 @@ public  class  Cliente extends Pessoa {
         return dia;
     }
 
-   
-   
+  
+    public String getBiAtendente() {
+        return BiAtendente;
+    }
 
 //    public static void main(String[] args) {
 //        Cliente c = new Cliente();
@@ -73,12 +75,7 @@ public  class  Cliente extends Pessoa {
 //        System.out.println(c.getGetData_do_registro());
 //
 //    }
-
-    public int getBiAtendente() {
-        return BiAtendente;
-    }
-
-    public void setBiAtendente(int BiAtendente) {
+    public void setBiAtendente(String BiAtendente) {
         this.BiAtendente = BiAtendente;
     }
 

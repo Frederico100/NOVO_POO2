@@ -40,7 +40,7 @@ public class ClienteDAO {
           
        
             st.setDate(6, new java.sql.Date(cliente.getData_do_registro().getTime()));
-            st.setInt(8, cliente.getBiAtendente());
+            st.setString(8, cliente.getBiAtendente());
             st.execute();
             st.close();
             con.close();
@@ -55,7 +55,7 @@ public class ClienteDAO {
     public void Update(Cliente cliente) {
        System.out.println("teste: "+cliente);
         Connection con = Conectar.getConectar();
-        String sql = "UPDATE quarto SET Nome=?,Idade=?,Sexo=?, Telefone=?,endereco=?, data_do_registro=?,Bi_Funcionario=? WHERE Bi=?";
+        String sql = "UPDATE cliente SET Nome=?,Idade=?,Sexo=?, Telefone=?,endereco=?, data_do_registro=?,Bi_Funcionario=? WHERE Bi=?";
 
         try {
             PreparedStatement st = con.prepareStatement(sql);
@@ -72,7 +72,7 @@ public class ClienteDAO {
             
             st.setDate(6, new java.sql.Date(cliente.getData_do_registro().getTime()));
             
-            st.setInt(7, cliente.getBiAtendente());
+            st.setString(7, cliente.getBiAtendente());
             
             st.setString(8, cliente.getBi());
             
@@ -90,7 +90,7 @@ public class ClienteDAO {
 
     public void delete(Cliente cliente) {
         Connection con= Conectar.getConectar();
-        String sql = "DELETE  FROM quarto WHERE Bi=?";
+        String sql = "DELETE  FROM cliente WHERE Bi=?";
 
         try {
             PreparedStatement ps = con.prepareStatement(sql);
@@ -136,7 +136,7 @@ public class ClienteDAO {
                 DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
                 cliente.setData_do_registro(result.getDate("data_do_registro"));
 
-                cliente.setBiAtendente(result.getInt("Bi_Funcionario"));
+                cliente.setBiAtendente(result.getString("Bi_Funcionario"));
                
                 lista.add(cliente);
              //   System.out.println(cliente);

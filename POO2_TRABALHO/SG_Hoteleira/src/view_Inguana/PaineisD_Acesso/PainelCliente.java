@@ -456,7 +456,7 @@ public class PainelCliente extends JPanel {
        
        Date dataRegistro = new Date((tfDateRegistro.getText()));
        
-       int Bi_atendente = Integer.parseInt(getPalavra(tfCdfuncio.getText()));
+       String Bi_atendente = getPalavra(tfCdfuncio.getText());
    
        Cliente cliente = new Cliente(bi,nome,idade,sexo,endereco,telefone,dataRegistro,Bi_atendente);
    
